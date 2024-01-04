@@ -16,14 +16,3 @@ def add_arg(argv):
 if __name__ == "__main__":
     import sys
     add_arg(sys.argv)
-............................................................
-vi 4-hidden_discovery.py
-
-#!/usr/bin/python3
-if __name__ == "__main__":
-    import hidden_4
-    # Print sorted name from directory
-    for name in sorted(dir(hidden_4)):
-        # print only names that do not start with __
-        if name[:2] != '__':
-            print("{}".format(name))
