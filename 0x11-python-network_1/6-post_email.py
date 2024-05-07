@@ -1,13 +1,11 @@
 #!/usr/bin/python3
 """
-Python script that takes in a URL and an email address,
-sends a POST request to the passed URL with the email,
-and displays the body of the response
+Python script that fetches an URL with requests package
 """
 import requests
-import sys
 
 
 if __name__ == "__main__":
-     r = requests.post(sys.argv[1], data={'email': sys.argv[2]})
-     print(r.text)
+    r = requests.get('https://alx-intranet.hbtn.io/status')
+    t = r.text
+    print('Body response:\n\t- type: {}\n\t- content: {}'.format(type(t), t))
